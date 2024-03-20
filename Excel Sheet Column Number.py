@@ -1,0 +1,12 @@
+class Solution:
+    def titleToNumber(self, columnTitle: str) -> int:
+        x = len(columnTitle)-1
+        ans = 0
+
+        for s in columnTitle:
+            letter = ord(s)-64
+            ans += letter*(26**x)
+            x -= 1
+
+        return ans
+        
